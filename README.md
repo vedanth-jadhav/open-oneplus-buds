@@ -1,4 +1,4 @@
-# Cracking OPOv1: Reverse Engineering the OnePlus Buds Protocol
+# Cracked OnePlus Buds: Reverse Engineering the OnePlus Protocol
 
 Control your OnePlus Nord Buds 3 Pro ANC modes directly from your Mac — without the HeyMelody app.
 
