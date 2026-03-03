@@ -60,7 +60,8 @@ func renderIcon(size: Int) throws -> NSImage {
     // Foreground symbol
     let pointSize = CGFloat(size) * 0.56
     let config = NSImage.SymbolConfiguration(pointSize: pointSize, weight: .semibold)
-    let symbol = NSImage(systemSymbolName: "earbuds", accessibilityDescription: nil)?
+    let symbolName = NSImage(systemSymbolName: "airpods", accessibilityDescription: nil) != nil ? "airpods" : "earbuds"
+    let symbol = NSImage(systemSymbolName: symbolName, accessibilityDescription: nil)?
         .withSymbolConfiguration(config)
 
     if let symbol {

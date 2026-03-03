@@ -6,6 +6,17 @@ Control your OnePlus Nord Buds 3 Pro ANC modes directly from your Mac — withou
 
 ---
 
+## Attribution / Credits
+
+This project is possible because **Aasheesh** reverse engineered the OnePlus/OPOv1 protocol and published the original work (blog + reference implementation).
+
+- Original repo (protocol cracking / CLI groundwork): https://github.com/AasheeshLikePanner/cracked-oneplus-buds
+- Reverse engineering write-up: https://aasheesh.vercel.app/blog/oneplus-buds
+
+The **macOS menu bar app** and ongoing app-level development in this repository is done by **Vedanth**.
+
+---
+
 ## The Problem
 
 You're working on your laptop. Earbuds connected via Bluetooth. You want to switch from Transparency to ANC mode but the gesture won't work. No problem — you'll just use the official app.

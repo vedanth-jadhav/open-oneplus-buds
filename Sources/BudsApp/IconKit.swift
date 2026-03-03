@@ -3,6 +3,14 @@ import AppKit
 import BudsCore
 
 enum IconKit {
+    static func menuBarMark() -> Image {
+        if let img = NSImage(systemSymbolName: "airpods", accessibilityDescription: nil) {
+            img.isTemplate = true
+            return Image(nsImage: img)
+        }
+        return Image(systemName: "earbuds")
+    }
+
     static func ancIcon(for mode: ANCMode?, connected: Bool) -> Image {
         let name: String? = {
             switch mode {
@@ -31,7 +39,7 @@ enum IconKit {
         case .some(.off):
             return Image(systemName: "circle")
         case .none:
-            return Image(systemName: "earbuds")
+            return menuBarMark()
         }
     }
 

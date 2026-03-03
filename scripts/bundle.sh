@@ -6,7 +6,7 @@ cd "$ROOT"
 
 CONFIG=${1:-release}
 APP_NAME="Buds"
-BUNDLE_ID="local.nordbuds"
+BUNDLE_ID="com.vedanth.open-oneplus-buds"
 
 ./scripts/build.sh "$CONFIG"
 
@@ -65,7 +65,7 @@ cat > "$CONTENTS/Info.plist" <<PLIST
   <key>CFBundleVersion</key>
   <string>1</string>
   <key>LSMinimumSystemVersion</key>
-  <string>26.0</string>
+  <string>13.0</string>
   <key>LSUIElement</key>
   <true/>
   <key>NSHighResolutionCapable</key>

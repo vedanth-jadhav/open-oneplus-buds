@@ -1,6 +1,15 @@
 # Buds (macOS Menu Bar App)
 
-This repo now contains a native macOS 26+ menu bar app (SwiftUI + CoreBluetooth) that controls OPOv1 earbuds using the same proven packet flow as `nordbuds.swift`.
+This repo now contains a native macOS 13+ menu bar app (SwiftUI + CoreBluetooth) that controls OPOv1 earbuds using the same proven packet flow as `nordbuds.swift`.
+
+## Attribution / Credits
+
+This project is possible because **Aasheesh** reverse engineered the OnePlus/OPOv1 protocol and published the original work (blog + reference implementation).
+
+- Original repo (protocol cracking / CLI groundwork): https://github.com/AasheeshLikePanner/cracked-oneplus-buds
+- Reverse engineering write-up: https://aasheesh.vercel.app/blog/oneplus-buds
+
+The **macOS menu bar app** and ongoing app-level development in this repository is done by **Vedanth**.
 
 Docs:
 
@@ -99,6 +108,8 @@ BUDS_DEBUG=1 ./scripts/run.sh
 ## Bluetooth permission (prompt should be once)
 
 If macOS keeps prompting for Bluetooth permission after rebuilds, it’s usually because the app is unsigned/ad-hoc signed and macOS treats each build as a new identity.
+
+This app bundles with a stable bundle ID (`com.vedanth.open-oneplus-buds`), but to keep the “identity” stable across rebuilds you should also use a stable code signing identity.
 
 Use:
 
