@@ -1,0 +1,18 @@
+# SwiftPM
+.build/
+.swiftpm/
+
+# Local bundles/output
+/dist/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Optional: user-provided icons may be local-only
+# (comment these out if you want icons tracked)
+# Sources/BudsApp/Resources/Icons/*.pdf
+# Sources/BudsApp/Resources/Icons/*.png

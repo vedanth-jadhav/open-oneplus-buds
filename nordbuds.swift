@@ -32,7 +32,21 @@ class NordBudsCLI: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
     
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         guard central.state == .poweredOn else {
-            print("[ERROR] Bluetooth is not powered on")
+            switch central.state {
+            case .poweredOff:
+                print("[ERROR] Bluetooth is powered off")
+            case .unauthorized:
+                print("[ERROR] Bluetooth permission denied/unauthorized for this process")
+                print("        System Settings -> Privacy & Security -> Bluetooth -> enable Terminal (or the app running this script).")
+            case .unsupported:
+                print("[ERROR] Bluetooth unsupported on this Mac")
+            case .resetting:
+                print("[ERROR] Bluetooth is resetting; try again in a moment")
+            case .unknown:
+                print("[ERROR] Bluetooth state unknown; try again")
+            @unknown default:
+                print("[ERROR] Bluetooth unavailable (state: \(central.state.rawValue))")
+            }
             exit(1)
         }
         
@@ -295,9 +309,7 @@ func main() {
     let args = CommandLine.arguments
     
     if args.count < 2 {
-        let cli = NordBudsCLI()
-        cli.command = .help
-        cli.printHelp()
+        NordBudsCLI().printHelp()
         exit(0)
     }
     
@@ -329,6 +341,11 @@ func main() {
         print("[ERROR] Unknown command: \(cmd)")
         print("Run '\(args[0]) help' for usage")
         exit(1)
+    }
+
+    if command == .help {
+        NordBudsCLI().printHelp()
+        exit(0)
     }
     
     print("[*] Looking for Nord Buds...")

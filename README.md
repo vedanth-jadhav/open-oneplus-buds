@@ -79,6 +79,15 @@ chmod +x nordbuds.swift
 
 ---
 
+## macOS Menu Bar App
+
+This repo also includes a native macOS menu bar app.
+
+- App overview: `README_APP.md`
+- Detailed architecture + “no polling” docs: `docs/README.md`
+
+---
+
 ## Command Flow
 
 ```mermaid
