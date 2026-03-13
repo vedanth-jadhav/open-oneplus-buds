@@ -12,6 +12,9 @@
 .vscode/
 .idea/
 
+# Videos / screen recordings
+*.mov
+
 # Optional: user-provided icons may be local-only
 # (comment these out if you want icons tracked)
 # Sources/BudsApp/Resources/Icons/*.pdf
