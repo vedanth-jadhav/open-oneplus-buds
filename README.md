@@ -4,9 +4,7 @@ Control your OnePlus Nord Buds 3 Pro ANC modes directly from your Mac — withou
 
 **[Read the full reverse engineering story →](https://aasheesh.vercel.app/blog/oneplus-buds)**
 
-## Demo
-
-[![Buds menu bar app demo (click to watch)](demo.png)](media/demo.mov)
+![Buds menu bar app screenshot](demo.png)
 
 ---
 
