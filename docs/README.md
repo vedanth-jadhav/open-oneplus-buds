@@ -18,4 +18,5 @@ Start here:
 - `notifications-and-live-updates.md` — how/when the buds stream updates to the Mac
 - `battery-impact.md` — battery-drain reality + how we minimize it
 - `debugging.md` — how to run with logs + what to look for
-- `device-notes-nord-buds-3-pro.md` — your specific device mappings/quirks
+- `device-notes-nord-buds-3-pro.md` — Nord Buds 3 Pro mappings/quirks
+- `device-notes-buds-z2.md` — OnePlus Buds Z2 mappings, UUIDs, and packet flow
